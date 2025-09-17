@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)file:///D:/Work/VLM%20dataset/Qwen2.5-vl%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Qwen2.5-vl测试结果</title>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="./Qwen2.5-vl各规模测试结果_files/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h3 id="目标检测数据集">目标检测数据集 </h3>
+<h4 id="sku-110k数据集">SKU-110K数据集 </h4>
+<p><img src="./Qwen2.5-vl各规模测试结果_files/test_33.jpg" alt="alt text" style="width:250px; height:auto;">  原始标注： <img src="./Qwen2.5-vl各规模测试结果_files/test33org.png" alt="alt text" style="width:250px; height:auto;"> 等</p>
+<p>prompt:请逐个列出图中所有的物体及其位置(每个物品位置的格式: [x1,y1,x2,y2]，一张图可能不止一个物品)</p>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>输出结果</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3B</td>
+<td>[{"bbox_2d":[0,63,840,1147],"label":"物体"}]</td>
+<td></td>
+</tr>
+<tr>
+<td>7B</td>
+<td>[{"bbox_2d":[-3,589,-476,1025],"label":"物体"}]</td>
+<td></td>
+</tr>
+<tr>
+<td>72B</td>
+<td>[{"bbox_2d":[0,64,839,1147],"label":"物体"}]</td>
+<td></td>
+</tr>
+<tr>
+<td>32B</td>
+<td>[{"bbox_2d":[-3,609,-1,748],"label":"药品"},{"bbox_2d":[5,60,839,1147],"label":"药品"}]</td>
+<td>效果稍好</td>
+</tr>
+</tbody>
+</table>
+<p>输出几乎都是一个很大的 bbox，明显没有覆盖原图中的多个小物体，而是覆盖大范围；<br>
+一些输出出现负值或不合理坐标（7B/32B 的输出），说明模型预测不精确。<br>
+模型本身对小物体密集场景识别能力弱，原始数据有130+个小物体，但测试模型几乎只能识别一两个物体，目标检测能力有限，只抓住最显眼的物体，漏检严重。</p>
+<p><img src="./Qwen2.5-vl各规模测试结果_files/test_426.jpg" alt="alt text" style="width:250px; height:auto;">  原始标注： <img src="./Qwen2.5-vl各规模测试结果_files/test426org.png" alt="alt text" style="width:250px; height:auto;"> 等</p>
+<p>prompt: 请逐个列出图中所有的物体及其位置(每个物品位置的格式: [x1,y1,x2,y2]，一张图可能不止一个物品)</p>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>输出结果</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3B</td>
+<td>[{"bbox_2d":[0,95,840,1106],"label":"物体"}]</td>
+<td>过于粗糙，只框出一个大区域</td>
+</tr>
+<tr>
+<td>7B</td>
+<td>[{"bbox_2d":[-3,940,876,1150],"label":"货架"}]</td>
+<td>过于粗糙，只识别出“货架”</td>
+</tr>
+<tr>
+<td>72B</td>
+<td>[{"bbox_2d":[0,95,840,1136],"label":"物体"}]</td>
+<td>类似 3B，只返回一个整体框</td>
+</tr>
+<tr>
+<td>32B</td>
+<td>[{"bbox_2d":[-3,968,507,1094],"label":"Coca-Cola"}]</td>
+<td>检测到具体品牌物体，但只输出一个，遗漏大量目标</td>
+</tr>
+</tbody>
+</table>
+<p>prompt: 请逐个列出图中<strong>货架</strong>上的物体及其位置(每个物品位置的格式: [x1,y1,x2,y2]，一张图可能不止一个物品)</p>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>输出结果</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3B</td>
+<td>[{"bbox_2d":[0,95,840,1107],"label":"货架上的物体"}]</td>
+<td>只给出一个大框，缺乏细节，遗漏多</td>
+</tr>
+<tr>
+<td>7B</td>
+<td>[{"bbox_2d":[-3,940,876,1150],"label":"货架"}]</td>
+<td>没有识别货架上的商品</td>
+</tr>
+<tr>
+<td>72B</td>
+<td>"图中货架上的物体及其位置如下：<br>1. 可口可乐塑料瓶（第一层）：- [0, 95, 839, 336] <br>2. 可口可乐塑料瓶（第二层）：- [0, 417, 839, 556] <br>3. 各种罐装饮料（第三层）： - [0, 568, 636, 725] 包括雪碧、芬达等品牌 <br> 4. 瓶装果汁和可口可乐（第四层）：- [0, 708, 839, 865]  - 包括美汁源柠檬水和可口可乐 <br>5. 罐装可口可乐（第五层）：- [0, 808, 839, 1085] <br> 6. 瓶装可口可乐（第六层）： - [0, 900, 46, 1105]"</td>
+<td>能细分层级和商品类别，但目标检测不够详细，标注模糊，缺少细节</td>
+</tr>
+<tr>
+<td>32B</td>
+<td>"以下是图片中货架上各个物体的位置和名称：<br> 第一层（最上方）- <strong>Coca-Cola 瓶装饮料</strong>： [0, 97, 836, 351]<br>第二层- <strong>小瓶 Coca-Cola 饮料</strong>： [0, 412, 836, 556]<br> 右侧部分 <strong>大罐碳酸饮料箱装产品</strong>： [636, 565, 836, 738] <br>第三层 - <strong>各种易拉罐饮品</strong>： 左边：绿色、蓝色等不同颜色的可乐或苏打水。 [0, 575, 598, 738]<br> 中间区域- 橙色包装的产品盒： [552, 584, 636, 738] <br> 右半区  - 大罐碳酸饮料箱装产品继续排列。<br> 第四层- <strong>Minute Maid 果汁盒子</strong>：- 整排均为 Minute Maid 的果汁箱子，包括柠檬味和其他口味。 [0, 738, 836, 918] <br>最底层- <strong>整箱 Coke 和其他品牌汽水</strong>：- 包括红色标签的大箱装 Coca-Cola 和橙色标志的小箱装产品。 [0, 898, 836, 1118] <br>以上是所有可见商品在图像中的大致分布。如果有更具体的分类需求，请进一步说明！"</td>
+<td>覆盖层次丰富，描述细致，能区分品牌与包装形式，但还是按层检测、没有具体分割每一个物体</td>
+</tr>
+</tbody>
+</table>
+<h4 id="总结">总结 </h4>
+<p>prompt描述对目标检测任务的结果影响很大。<br>
+7B：输出结果简单，停留在整体层面；坐标有错误；<br>
+3B / 72B：输出简化结果，只能检测出大范围框，缺乏对多个物体的细分能力；<br>
+32B：能生成较为详细的结构化信息，并区分不同商品，整体完整性和正确性最好，但是仍然不够具体<br>
+结论：32B &gt; 72B &gt; 3B &gt; 7B，32B 表现最好，72B 偏向自然语言描述，3B/7B 表现明显不足。</p>
+<hr>
+<h3 id="vqa">VQA </h3>
+<h4 id="mminstruct-cn-数据集">MMInstruct-cn 数据集 </h4>
+<img src="./Qwen2.5-vl各规模测试结果_files/00001215.jpg" alt="alt text" style="width:250px; height:auto;">  
+<p>原始标注：这张照片为一家照明昏暗的小型零食店内部，货架上摆放着多种包装食品，如面包、饮料和零食，顶部有价目表显示各种商品的价格。货架上方贴有指示牌“GATHER &amp; GO，DRINKS $X1”等文案。前方有一个木质收银台，上面放着一个金属篮子和一些食品。店内没有顾客，氛围较为温馨。</p>
+<p>prompt: 请对图片写一个详细的描述，抓住它的主要组成部分，描述值得注意的细节。</p>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>输出结果</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3B</td>
+<td>这张图片展示了一家面包店的内部，主要分为几个部分： 1. <strong>货架和展示柜</strong>： - 左侧的货架上摆放着各种瓶装饮料和罐装食品。 - 中间区域有一个玻璃展示柜，里面放着一些糕点和甜品。 - 右侧的货架上也有类似的物品，包括瓶装饮料、罐装食品和一些包装好的零食。<br> 2. <strong>商品分类</strong>： - 左侧的货架上可以看到“GATHER &amp; GO! DRINKS”（聚餐与饮品）的标志。 - 右侧的货架上有“WRAPS &amp; SALAD”（风味卷和沙拉）的标识。<br> 3. <strong>价格标签</strong>： - 桌面上有多个价格标签，显示了不同商品的价格。例如，巧克力饼干的价格是15.00元，布朗尼巧克力曲奇的价格也是15.00元。<br> 4. <strong>装饰和氛围</strong>： - 店内光线柔和，营造出温馨舒适的购物环境。 - 展示柜上方有一些绿色和紫色的指示牌，可能提供关于商品的信息或促销活动。 整体来看，这家面包店的商品种类丰富，价格清晰，布局整洁，适合顾客挑选和购买。</td>
+<td>整体契合场景，细节较少，准确率较高（面包店判断不正确）</td>
+</tr>
+<tr>
+<td>7B</td>
+<td>这张照片展示了一家食品店内部的一部分区域，具体来说是一个烘焙区和饮料区相结合的地方。<br>1. <strong>面包和其他糕点</strong>：前景中有两个白色的木制托盘里装满了各种包装好的新鲜出炉的面包、蛋糕以及其他甜品。这些食物被透明塑料袋包裹着，并且每个都有价格标签贴在旁边的小牌子上（例如“布朗尼饼干”售价为50元）。可以看到有巧克力片夹心的棕色小方块以及看起来像是松饼或甜甜圈等其他类型的糕点。<br> 2. <strong>冷藏柜中的饮品与零食</strong>： - 在背景中有一个大型冰箱门打开的状态下展示了多种瓶装果汁或者碳酸饮料等多种冷饮产品整齐地排列在里面；上面还标有一些中文说明文字提示顾客可以在这里找到不同种类的产品供选择购买；<br> 3. <strong>货架上的商品</strong>: 两侧是高高的白色架子，里面摆放了各式各样的罐头制品如橄榄油、蜂蜜等等调味料类的商品也摆放在其中间位置还有些小型玻璃容器内盛放一些干果坚果类产品比如杏仁腰果或者是开心果之类的休闲小吃品种丰富多样非常吸引眼球让人忍不住想要品尝一下味道如何呢？<br> 4. <strong>装饰元素及氛围营造</strong>: 店铺整体给人一种温馨舒适的感觉灯光柔和而温暖使得整个空间显得更加亲切自然适合家庭聚会或是朋友聚餐时来此选购美食享受美好时光！墙上悬挂的一些海报介绍了该店铺特色服务项目并附带详细图文介绍方便消费者了解更多信息便于做出决策决定是否光临消费体验一番哦~"</td>
+<td>细节更多，分店描述条理清晰，但出现部分数值错误（价格50元 vs 15元），整体准确率中等。</td>
+</tr>
+<tr>
+<td>72B</td>
+<td>这张图片展示了一家精致的食品店内部，主要组成部分和细节如下：<br> 1. <strong>前台展示区</strong> - <strong>面包和糕点</strong>：前景中有两个白色的木制托盘，里面摆放着各种包装好的面包和糕点。每个包装上都有黄色的小标签，可能是价格或产品信息。托盘下方有小牌子显示具体的价格，如15.00、24.00等。 - <strong>透明罩子</strong>：在面包和糕点旁边，有几个透明的玻璃罩子，里面也放置了一些糕点或甜品，看起来非常诱人。 - <strong>零食</strong>：右侧有一个纸袋，里面装满了橙色的零食棒，旁边也有一个价格牌。 <br> 2. <strong>货架区</strong> - <strong>商品种类丰富</strong>：背景中可以看到多个货架，上面摆满了各种商品。货架上的商品种类繁多，包括瓶装饮料、罐头食品、调味品等。 - <strong>标签和说明</strong>：每个货架上方都有详细的标签和说明，有些是绿色的，有些是白色的，内容可能包括产品的成分、制作工艺等信息。 - <strong>酒类</strong>：中间部分的货架上有一些瓶装酒，整齐地排列在一起，显得非常高档。<br> 3. <strong>冷藏区</strong> - <strong>饮料和沙拉</strong>：右侧有一个大型的冷藏柜，里面摆放着各种饮料和沙拉。冷藏柜上方有一个标志，写着“GATHER &amp; GO! DRINKS 饮料”，表明这是一个提供即拿即走饮料的地方。 - <strong>包装食品</strong>：冷藏柜旁边还有一些包装好的食品，可能是方便携带的零食或小吃。 <br> 4. <strong>其他细节</strong> - <strong>灯光</strong>：整个店铺的灯光柔和而明亮，营造出温馨舒适的购物环境。 - <strong>装饰</strong>：店铺的装饰简洁大方，货架和展示台都保持整洁，给人一种干净卫生的感觉。 总体来说，这家食品店不仅商品种类丰富，而且陈列整齐，环境舒适，非常适合顾客选购各种美食和饮品</td>
+<td>细节丰富，整体准确率高，条理不够清晰</td>
+</tr>
+<tr>
+<td>32B</td>
+<td>这张照片展示了一个精致且布置有序的小型食品店或超市的一部分，重点在于其货架和柜台上的商品陈列以及整体环境设计。 <br> <strong>1. 主要部分：</strong>  （a）<strong>前台区域（前景）:</strong> - 前台是一个木质桌面，上面摆放着多个白色木制托盘。 - 托盘内装有包装好的烘焙产品： - 左侧托盘中包含各种饼干、糕点等甜品类食物，并用透明塑料袋单独包裹，标签上标有不同的价格信息，如“$15”、“$24”，并附带英文说明名称及种类。 示例可见的产品包括巧克力曲奇饼和其他类型的酥皮蛋糕。 - 中间偏右位置有一个较大的矩形托盘，里面也放置了类似的商品类型——可能是面包或其他烘培制品，同样使用黄色小贴纸标明类别与定价。 - 右边还有一个棕色编织篮子状容器，其中放有一些长条形状的食物，类似于薯片棒或者脆零食，旁边也有相应的价签显示为 "$7" 或其他金额。  <br> (b) <strong>中间层柜架区:</strong> 在前排桌面上方是几组开放式架子：  第一层: - 柜台上展示了两个玻璃罩保护下的圆形旋转展台，用于存放一些装饰性较强的美食展品，例如多款精美的西式甜点塔或是慕斯类产品；每个展位下方都有纸质的价格牌标识单价范围从 $3 到 $6 不等；  其他开放式的货格里整齐地排列了许多瓶罐物品， 这些瓶子大小不一颜色各异可能包含了酱料调味汁橄榄油以及其他饮品饮料等等 此外，在右侧背景处还有一块紫色招牌写着 "WRAPS &amp; SALAD 风味卷沙拉"  <br> (c)<strong>后部冷藏专区(远景):</strong> 再往后可以看到一台大型冷藏冰箱门打开状态内部储存了一些新鲜蔬菜水果还有盒装熟食肉类它们被分类摆放在不同隔板之间显得非常整洁明亮灯光照射下更显诱人色彩丰富多样 总结来说整个场景给人一种温馨舒适的感觉无论是视觉还是氛围都体现出一种高品质生活理念注重健康饮食同时也兼顾美观实用性强适合现代都市人群日常购物需求同时也能吸引那些追求品质生活的消费者前来选购心仪好物！</td>
+<td>描述极为详细，条理清晰，准确率高</td>
+</tr>
+</tbody>
+</table>
+<img src="./Qwen2.5-vl各规模测试结果_files/00008487.jpg" alt="alt text" style="width:250px; height:auto;">  
+<p>原始标注：这张照片显示了一条河流上的一艘载满乘客的游船。阳光下，船身呈长条形，颜色主要为白色，并带有一些深棕和红色的装饰。船的顶部是开放式的，可以清楚地看到上面有两层甲板。上层甲板开放无顶，乘客们均坐在那里，他们大多穿着休闲装备，像是在享受愉快的游览。  <br> 甲板的座椅排列整齐，分布在船的前端至后端，很多乘客都朝外侧看去，可能是在欣赏河岸的风光。天气似乎很好，乘客们大都戴着墨镜或帽子来遮挡强烈的阳光。下层甲板覆盖着屋顶，但照片中不易看清里面的情况。  <br> 在游船的最前端，可以看到船长或驾驶员所在的位置，他位于一个有遮盖的驾驶舱中，驾驶舱的色彩与船身的装饰色相呼应。驾驶区域周围设有玻璃或透明的塑料防风挡，以便于船长可以清晰地观察四周的环境。  <br> 在船两侧都挂有救生圈，以确保乘客的安全。河水平静，反射着周围景色和阳光，船体产生了轻微的波纹，显示出它正在平稳地行驶中。  <br> 整体上，这幅图像传达出了一个休闲的午后时光，人们在舒适的气候和温馨的环境下，享受着河上的游览。游船和其上的人们所在的河段开阔，没有明显的其他船只，强调了这是一次安静且私密的体验。</p>
+<p>prompt: 请对图片写一个详细的描述，抓住它的主要组成部分，描述值得注意的细节。</p>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>输出结果</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3B</td>
+<td>这是一艘大型的白色游船，船身呈流线型设计，侧面有红色条纹装饰。船上装有多个座位，乘客们坐在这些座位上，享受着航行的乐趣。船头和船尾各有一个黑色的栏杆，增加了安全性。在船的中部，可以看到一个黄色的救生圈，表明了安全措施。</td>
+<td>描述过于简洁，遗漏乘客数量、甲板细节，画面还原度有限。</td>
+</tr>
+<tr>
+<td>7B</td>
+<td>这张照片展示了一艘停泊在水面上的小型游船。这是一条长而窄的船只，具有复古风格的设计元素。 <br> 1. <strong>外观设计</strong>：这条小船有一个独特的双层甲板结构。- 上层是开放式的座位区，在阳光下供乘客欣赏风景和享受户外时光；座椅为红色，并排整齐地排列着。 <br> 2. <strong>装饰与颜色搭配</strong>：船身主体部分以白色为主色调并带有深色边框线条勾勒出窗户、栏杆等部位轮廓线； <br> 3. <strong>内部设施及人员活动情况</strong>在上层甲板区域可以看到许多游客坐在椅子或站立观看周围景色， <br> 4. 该船上还有一个人站在驾驶舱内操作方向盘（舵轮），可能是在准备航行或是已经开始了旅程中的一部分行程了; <br> 5. 水面平静无波浪起伏且反射光线呈现出蓝色调子表明天气晴朗适合出游体验; <br> 6. 整体氛围轻松愉悦充满休闲旅游气息;  <br>  7. 远处背景模糊可见岸边树木植被茂密环境优美自然风光宜人可供观赏拍照留念回忆美好瞬间.总结来说此图描绘了一个典型的水上观光游览场景其中包含了人们乘坐小型豪华游艇进行旅行娱乐放松心情的过程以及周边美丽的湖光山色美景令人向往憧憬未来有机会亲自去感受一番!</td>
+<td>细节较丰富，准确度中等（如小型游船判断不正确）</td>
+</tr>
+<tr>
+<td>72B</td>
+<td>这张图片展示了一艘在水面上航行的游船，船上载满了乘客。以下是图片的主要组成部分和值得注意的细节： <br>  1. <strong>游船结构</strong>- <strong>船体</strong>：船体呈长方形，底部为深红色，上部为白色。船身设计简洁，具有典型的观光游船风格。- <strong>甲板</strong>：甲板上有许多红色的座椅，乘客们坐在上面。甲板周围有黑色的护栏，确保乘客的安全。- <strong>驾驶舱</strong>：船头有一个小型的驾驶舱，里面可以看到一名穿着绿色衣服的驾驶员正在操作船只。 <br>  2. <strong>乘客</strong>- <strong>人数与分布</strong>：船上坐满了乘客，大约有30-40人。他们大多坐在甲板上的红色座椅上，面向前方或两侧，享受着水上旅行的乐趣。- <strong>活动</strong>：一些乘客在聊天、拍照或欣赏周围的风景。前排中间有一张白色的桌子，上面放着一些物品，可能是饮料或其他小物件。- <strong>服装与配饰</strong>：乘客们穿着夏季服装，许多人戴着帽子和太阳镜，显然是为了防晒。他们的表情看起来都很放松和愉快。 <br>  3. <strong>环境与背景</strong>- <strong>水面</strong>：游船行驶在平静的水面上，水面反射出天空和周围的景色，显得非常宁静。- <strong>岸边</strong>：远处可以看到岸边的树木和植被，显示出这是一个自然环境中的水域，可能是一个湖泊或河流。- <strong>天气</strong>：天气晴朗，阳光明媚，适合户外活动。 <br>  4. <strong>其他细节</strong>- <strong>救生设备</strong>：甲板上放置了一些黄色的救生圈，以备不时之需。- <strong>装饰</strong>：船头有一些装饰性的灯光装置，可能是为了夜间航行时增加美观和安全性。总体来说，这是一幅充满活力和欢乐的场景，展示了人们在游船上享受美好时光的情景。</td>
+<td>细节丰富，整体准确率高，条理不够清晰，还原度高</td>
+</tr>
+<tr>
+<td>32B</td>
+<td>这张照片展示了一艘在水面上航行的游船，船上载满了乘客，并且周围环境宁静而美丽。 <br>  <strong>1. 游轮的主要部分：</strong>- <strong>外观设计</strong>：- 船体整体呈长方形结构。- 外部颜色为红色和白色相间的设计风格，底部是深色（可能是红棕色），上半部分主要是白色的外壳装饰有金色线条作为点缀。- <strong>甲板区域</strong>：- 上层有一个开放式的观景平台，平台上装有多排橙黄色座椅供游客休息或观赏风景。- 座椅整齐排列成两列，在两侧设有黑色护栏以确保安全。- 平台上方有一些遮阳棚状设施提供阴凉处给乘坐在上面的人们使用。- <strong>驾驶舱/控制室</strong>：- 前方是一个较小的空间，可能用于驾驶员操作船只的地方。该空间由玻璃窗围合而成，可以看到内部的一些设备以及一名工作人员正在工作。- 驾驶室内有一名穿着绿色衣服的操作员站在那里操控着船舶的方向盘或其他装置。 明显特征:- 在前侧顶部放置了一个救生圈和其他一些应急装备如绳索等物品；这些表明这是一条注重安全性的小型观光客船； <br>  <strong>2. 客人与活动情况:</strong>- 这些客人大多集中在二层露台上享受旅程中的风光美景.<em>他们中有些人坐着聊天、拍照或者欣赏周围的景色;另一些则站立起来观看前方的情况.</em> 每个人都显得非常放松愉快地参与其中.此外还可以看到许多人都戴着帽子防晒或是太阳镜保护眼睛免受阳光直射的影响 . <br>  <strong>3. 环境背景:</strong> 水面平静无波澜 , 只能看到轻微涟漪反射出天空的颜色 。远处隐约可见岸边树木及建筑物轮廓 ，但没有太多干扰元素使得整个画面更加集中于主体——即那艘满载欢乐人群 的小游艇之上 . 总结来说此图传递了轻松愉悦氛围同时也展示了现代城市河流旅游项目之一种形式 ：乘坐小型豪华邮轮游览河畔景观并体验当地文化风情等活动内容丰富多样值得期待 !</td>
+<td>描述细致，条理性稍好，较为准确</td>
+</tr>
+</tbody>
+</table>
+<h4 id="总结-1">总结： </h4>
+<pre class="language-text">3B：描述简单，细节不足
+7B：描述比较丰富，准确率中等
+32B / 72B：细节丰富，准确度高，32B分点更清晰、条理更顺畅
+</pre>
+<hr>
+<h3 id="图文caption">图文Caption </h3>
+<h4 id="datacomp数据集">DataComp数据集 </h4>
+<img src="./Qwen2.5-vl各规模测试结果_files/comp1.jpg" alt="alt text" style="width:200px; height:auto;">  
+<p>原始标注：A white container with a blue label featuring the brand name 'Physicians' Choice' and the product name '60 Billion Probiotic with Prebiotic Fiber Blend'. The label also includes the phrase 'Acid Resistant Technology' and a logo with a blue droplet. The container is placed next to a white bottle with a blue cap, which is also labeled with the brand name and product name. The bottle has a blue droplet design on its label.<br>
+翻译：一个带有蓝色标签的白色容器，标签上写有品牌名 <strong>“Physicians' Choice”</strong> 和产品名 <strong>“60 Billion Probiotic with Prebiotic Fiber Blend”</strong>。标签上还包含 <strong>“Acid Resistant Technology”</strong> 字样，以及一个带有蓝色水滴的标志。容器旁边放着一瓶带蓝色瓶盖的白色瓶子，上面同样标注了品牌名和产品名，标签上也有蓝色水滴的设计。</p>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>输出结果</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3B</td>
+<td>图片展示了一款名为Physician's Choice的益生菌补充剂。这款产品由30粒可溶性胶囊组成，每粒含有60亿个活菌和10种益生菌株。包装盒为蓝色和白色相间的设计，顶部印有“Physician's Choice”字样，强调其专业性和选择性。盒子上还标注了“酸碱稳定技术”，表明该产品经过特殊处理以抵抗胃酸，确保益生菌在消化道中的存活率。此外，包装上明确指出该产品是素食、非转基因食品，并且适合孕妇使用。</td>
+<td>描述信息完整，有初步推理的信息，存在幻觉和错误（600亿）</td>
+</tr>
+<tr>
+<td>7B</td>
+<td>这张图片展示了一款名为“Physician's Choice”的益生菌产品包装和瓶子。产品的名称醒目地显示在白色瓶身上，“60 Billion Probiotic”（含有六十亿个活性有益细菌）是其核心卖点之一。“Prebiotic Fiber Blend”，即预生物纤维混合物，则强调了该产品中还包含了促进肠道健康的成分。\n\n盒子上也印有同样的信息，并且特别标注出它具有酸性耐受技术以及包含10种不同的菌株、每份含有的活细胞数量为六十分亿CFU等详细参数说明；此外，在左下角还有明确标识这款补充剂不含转基因物质(GMO)及非乳制品来源(NON-GMO)，确保消费者能够放心使用此健康食品添加剂来改善消化系统功能或维持体内微生物平衡状态。\n整体而言, 这张照片清晰展示了品牌名及其主打功效特点;同时通过对比色设计使文字更加突出易读性强便于吸引目标消费群体注意购买欲望强烈!</td>
+<td>描述信息完整，细节丰富，有推理的信息，存在幻觉和错误（600亿）</td>
+</tr>
+<tr>
+<td>72B</td>
+<td>这张图片展示了一款名为“Physician's Choice”的益生菌补充剂产品。以下是该产品的详细描述： 主要组成部分： 1. <strong>产品包装</strong>：<strong>瓶子</strong>：前景中是一个白色的塑料瓶，瓶盖也是白色的。瓶子上有一个蓝色和白色的标签。 <strong>盒子</strong>：背景中是一个蓝色的纸盒，上面有白色和浅蓝色的文字和图案。 2. <strong>标签内容</strong>： <strong>品牌名称</strong>：标签顶部醒目地显示了“Physician's Choice”字样，字体为蓝色和绿色。 <strong>产品名称</strong>：标签中间用大号黑色字体写着“60 BILLION PROBIOTIC”，表示每份含有600亿个益生菌。 <strong>额外成分</strong>：标签下方有一行小字，写着“With Prebiotic Fiber Blend”，表明产品还含有益生元纤维混合物。<strong>技术特点</strong>：标签上还提到“Acid Resistant Technology”，表示该产品具有耐酸技术，有助于益生菌在胃酸环境中存活。 <strong>其他信息</strong>：标签底部有一些较小的文字，包括“30 Delayed-Release Veggie Capsules”（30粒缓释素食胶囊）和“10 Strains”（10种菌株）等信息。 3. <strong>视觉元素</strong>： <strong>水滴图案</strong>：瓶子和盒子上都有一个蓝色的水滴图案，象征着纯净和健康。 <strong>颜色搭配</strong>：主要使用了白色、蓝色和绿色，给人一种清新、健康的感觉。 值得注意的细节： <strong>剂量和数量</strong>：瓶子和盒子上都明确标注了“60 BILLION PROBIOTIC”和“30 Delayed-Release Veggie Capsules”，方便消费者了解产品的具体含量和数量。 <strong>技术亮点</strong>：强调了“Acid Resistant Technology”，这是该产品的一个重要卖点，表明其在消化过程中能够更好地发挥作用。&lt;<strong>认证和批准</strong>：盒子上提到“Physician Approved”，增加了产品的可信度和权威性。 <strong>非转基因</strong>：标签上还标注了“Non-GMO”，表明产品不含转基因成分，符合一些消费者的健康需求。总体来说，这款产品通过清晰的标签设计和详细的说明，向消费者传达了其高含量、多菌株、耐酸技术和健康成分的特点。</td>
+<td>内容非常详尽，分点清晰，覆盖核心信息，和原始标注高度一致，准确性高。</td>
+</tr>
+<tr>
+<td>32B</td>
+<td>这张图片展示了一款名为“Physician's Choice”的益生菌补充剂产品及其包装盒。以下是对其详细描述： <strong>1. 产品的瓶身</strong> <strong>形状与材质</strong>：瓶子呈圆柱形，顶部有一个白色盖子。 <strong>标签设计</strong>： 标签背景为浅蓝色和透明色相间的设计风格，整体简洁且具有现代感。 左上角印有品牌名称：“PHYSICIAN'S CHOICE”，字体较小但清晰可见，并带有注册商标符号（®）。中央部分用大号黑色粗体字突出显示核心信息：“60 BILLION PROBIOTICS” 和 “WITH PREBIOTIC FIBER BLEND”。这表明该产品含有高浓度的活细菌数量以及预生物纤维混合物作为辅助成分。 下方有一滴水珠图案，象征着健康或纯净的概念。 右下侧标注了以下关键点： 数量说明：“30 Delayed Release Veggie Capsules”，表示每瓶包含30粒胶囊形式的产品。 其他文字包括一些认证标志如非转基因有机食品标识等。 <strong>2. 包装盒子</strong> <strong>颜色搭配</strong>：外箱以蓝白为主色调，给人一种清新、专业的感觉。 <strong>正面内容</strong>：上部中央位置同样标示出品牌名：“PHYSICIANS'CHOICE™”，并配有一些小图标装饰增强视觉效果。 正中间醒目地写着主标题：“ACID RESISTANT TECHNOLOGY”，强调其采用的技术能够保护有益微生物在通过胃酸时不受破坏。 同样重复提及重点卖点——“60 BILLION PROBIOTICS WITH PREBIOTIC FIBER BLEND。”  底端左侧列出了具体规格及特点： 每日推荐剂量是每日服用一至两颗；总计提供约六十亿CFU单位的有效活性乳杆菌群落形成单元数 (Colony Forming Units)；注意到的一些其他特征: 在右下方也有类似液体状图形元素呼应主题, 并再次提到延迟释放技术保障功效最大化. 总结来说这款保健品主打高效能含量(高达六百亿个有效菌株), 配合耐受性强的特点来确保肠道内环境得到优化改善作用显著! 它不仅适合日常保健需求还特别适用于需要额外支持肠胃功能的人士使用！此外从外观上看无论是容器还是配套纸板都体现出一种高端品质形象传递给消费者信赖度高的信号~</td>
+<td>叙述全面，条理清晰，分点更适当，细节丰富，准确性较高（60亿错误）</td>
+</tr>
+</tbody>
+</table>
+<p>3B：描述有发挥，部分细节不符，准确性较低。<br>
+7B：整体合理，但存在数值错误，可信度一般。<br>
+32B；描述细节丰富，准确度较高。<br>
+72B：描述最接近原始标注，信息完整、准确度高。</p>
+<img src="./Qwen2.5-vl各规模测试结果_files/comp2.jpg" alt="alt text" style="width:200px; height:auto;">  
+<p>原始标注：A variety of colorful woven baskets and pottery are displayed on a shelf, with a large antler decoration above them. The shelf is adorned with various items including a cross, a picture of a woman, and a stone statue. There are also several small stones and a wooden cross on the shelf.<br>
+翻译：各种色彩斑斓的编织篮子和陶器陈列在一个架子上，架子上方挂着一件大型鹿角装饰。架子上摆放着各种物品，包括一个十字架、一张女性的照片和一尊石像。架子上还有几块小石头和一个木制十字架。</p>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>输出结果</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3B</td>
+<td>这张图片展示了一个充满各种物品的房间。在最左边，有一块粉红色和白色的地毯，上面有几何图案。在它的右边，有一个蓝色的猫形艺术品，旁边是一个木制十字架。在交叉架上方，挂着一个带有白色背景和蓝色边框的圆形标志。在交叉架下方，可以看到一些篮子、碗和其他物品。在这些物品中，有一个绿色的花束放在一个白色的容器里。在花束旁边，有一个黄色的球体，可能是装饰品或玩具。在交叉架的右侧，墙上挂着一幅画，描绘了一只棕色的熊。在熊的上方，还有一个小雕像，看起来像一只狗。在雕像的右边，可以看到一块灰色的石头。在交叉架下面，可以看到一些彩色的毛线球，可能用于编织或其他手工艺活动。在毛线球旁边，有一个装满不同颜色和形状的珠子的盒子。最后，在交叉架的最右边，可以看到一个装满各种大小和形状的石头的盒子。</td>
+<td></td>
+</tr>
+<tr>
+<td>7B</td>
+<td>这张照片展示了一个室内场景，可能是一个手工艺品店或展览空间的一部分。墙壁上挂着各种装饰品和艺术品：墙壁左侧有一块带有几何图案的传统地毯。 <br>中间部分有多个木制十字架形状的艺术作品挂在墙上，并且上面有一些彩色的小画框或者标签贴纸。在墙面上还悬挂着一些石头、贝壳等自然元素作为点缀；这些物品看起来像是来自某个特定地区或是具有某种文化意义的东西，在这里被用作墙面装点之物之一种方式来表达一种与大自然联系紧密的主题风格；此外还有一些手工编织篮子整齐地摆放在桌子前供顾客挑选购买使用它们可以用来盛放食物水果蔬菜或者其他小物件也可以当作家居饰品摆放家里增添一份温馨感同时也能体现出主人对于生活品质有着较高追求态度以及热爱传统工艺制作技艺精神面貌积极向上充满正能量值得我们学习借鉴之处多多益善哦！</td>
+<td></td>
+</tr>
+<tr>
+<td>72B</td>
+<td>这张图片展示了一个充满手工艺品和装饰品的室内场景，可能是一个小型的手工艺店或展览空间。以下是对图片主要组成部分和细节的详细描述： 1. <strong>墙壁上的装饰品</strong>\ - <strong>十字架</strong>：在左上角有一个木制的十字架，可能是宗教装饰品。 - <strong>画作和照片</strong>：墙上挂着几幅小画作和照片，包括一幅带有几何图案的画、一幅描绘人物的画以及一些彩色的抽象图案。 - <strong>石头和化石</strong>：右侧墙上摆放着几块形状各异的石头和化石，可能是自然收藏品。 2. <strong>编织篮子和容器</strong>  - <strong>编织篮子</strong>：左侧地面上摆放着多个编织篮子，大小不一，颜色多样，展示了不同的编织技术和图案。 - <strong>其他容器</strong>：还有一些用不同材料制成的容器，如竹编和藤编，展示了丰富的手工技艺。3. <strong>纺织品和布料</strong>  - <strong>挂毯</strong>：左侧墙壁上有一块带有几何图案的挂毯，颜色鲜艳，可能是传统的织物艺术。 - <strong>布料卷</strong>：中间部分有一些卷起来的布料，颜色丰富，可能是用于制作衣物或其他纺织品的材料。 4. <strong>其他手工艺品</strong> <strong>羽毛和管状物品</strong>：前景中有一些长条形的管状物品和羽毛，可能是用于装饰或仪式用途的手工艺品。 - <strong>珠子和串饰</strong>：右下角有一些装满珠子和串饰的小盒子，展示了精细的手工制作。  - <strong>彩色线轴</strong>：中间部分有一些彩色的线轴，可能是用于刺绣或其他纺织工作的材料。 5. <strong>动物标本</strong>   - <strong>熊头</strong>：右上角悬挂着一个熊头标本，增加了整个场景的自然和原始感。 6. <strong>标签和说明</strong>  - 每个展品旁边都有小标签，提供了关于这些手工艺品的信息和价格，方便参观者了解和购买。<br>整体来看，这个场景充满了各种各样的手工艺品和装饰品，展示了丰富的文化和传统技艺，给人一种温馨和艺术的感觉。</td>
+<td></td>
+</tr>
+<tr>
+<td>32B</td>
+<td>这张照片展示了一个充满文化气息和手工制品的小型展览或销售区域。以下是对图像的主要部分及其详细特征的描述：<strong>1. 墙面装饰</strong> - <strong>背景墙</strong>：墙面为浅棕色泥土质感，给人一种自然、质朴的感觉。 - 左侧墙上挂着一张带有几何图案的设计图样（可能是编织毯子的一部分）。 - 中间偏左位置有一个十字架形状的艺术品，上面有彩色标记线段，并且旁边有一幅描绘熊形象的手绘作品。艺术与符号： 右上角悬挂着一块毛皮状物品，可能是一块动物皮革或其他天然材料制成的作品。 多个手绘画作被挂在墙壁上方及中部的位置，其中一幅画中包含“29”字样和其他抽象元素；另一些则具有原住民风格的特点，如圆形设计等。 <strong>2. 展示台上的商品</strong> （a）左侧篮类工艺品区： 桌面上整齐排列了多种颜色鲜艳的传统编筐工艺产品。  - 包括不同大小和材质的柳条编制物以及草绳制作而成的各种小篮子；   尤其是顶部放置了一组较大的圆盘形器皿，边缘用细密线条勾勒出花纹样式。(b) 正中央的商品摆放:- 在桌子正中间是一个银色金属制的大号十字架装置作为中心点, 其下方陈列了一些小型标签纸张来标注价格信息.(c) 石头展品:   <em>在右侧后方展示了多件形态各异的岩石标本</em>, 它们呈现出不规则棱柱体或者尖锐锥形外观 , 表明这些石头经过精心挑选并用于收藏用途. 特别注意的是:   靠近右下角落处还可见到一些色彩缤纷丝带卷轴堆叠在一起; 还有一些木棍雕刻成简单图形摆放在前方供人观赏购买使用 . 总结：此场景整体营造出了浓厚的文化氛围，结合传统艺术形式(例如壁画 ) 和实用性的民间手艺产物 。无论是从视觉美感还是功能性角度来看都体现了当地特色鲜明的生活方式 . 各种物件均以简洁而富有创意的方式呈现出来，在保持原始风味的同时也透露出现代化商业化的痕迹．这或许可以理解为其背后所蕴含的历史传承价值正在通过这种方式得以延续与发展下去！</td>
+<td>叙述全面，条理清晰，分点更适当，细节丰富，准确性较高</td>
+</tr>
+</tbody>
+</table>
+<p>均比原始标注详细，细节丰富、完整，个别信息不准确。</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
