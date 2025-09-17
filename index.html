@@ -28,7 +28,7 @@
       
 <h3 id="目标检测数据集">目标检测数据集 </h3>
 <h4 id="sku-110k数据集">SKU-110K数据集 </h4>
-<p><img src="./Qwen2.5-vl各规模测试结果_files/test_33.jpg" alt="alt text" style="width:250px; height:auto;">  原始标注： <img src="./Qwen2.5-vl各规模测试结果_files/test33org.png" alt="alt text" style="width:250px; height:auto;"> 等</p>
+<p><img src="./images/test_33.jpg" alt="alt text" style="width:250px; height:auto;">  原始标注： <img src="./images/test33org.png" alt="alt text" style="width:250px; height:auto;"> 等</p>
 <p>prompt:请逐个列出图中所有的物体及其位置(每个物品位置的格式: [x1,y1,x2,y2]，一张图可能不止一个物品)</p>
 <table>
 <thead>
@@ -64,7 +64,7 @@
 <p>输出几乎都是一个很大的 bbox，明显没有覆盖原图中的多个小物体，而是覆盖大范围；<br>
 一些输出出现负值或不合理坐标（7B/32B 的输出），说明模型预测不精确。<br>
 模型本身对小物体密集场景识别能力弱，原始数据有130+个小物体，但测试模型几乎只能识别一两个物体，目标检测能力有限，只抓住最显眼的物体，漏检严重。</p>
-<p><img src="./Qwen2.5-vl各规模测试结果_files/test_426.jpg" alt="alt text" style="width:250px; height:auto;">  原始标注： <img src="./Qwen2.5-vl各规模测试结果_files/test426org.png" alt="alt text" style="width:250px; height:auto;"> 等</p>
+<p><img src="./images/test_426.jpg" alt="alt text" style="width:250px; height:auto;">  原始标注： <img src="./images/test426org.png" alt="alt text" style="width:250px; height:auto;"> 等</p>
 <p>prompt: 请逐个列出图中所有的物体及其位置(每个物品位置的格式: [x1,y1,x2,y2]，一张图可能不止一个物品)</p>
 <table>
 <thead>
@@ -138,7 +138,7 @@
 <hr>
 <h3 id="vqa">VQA </h3>
 <h4 id="mminstruct-cn-数据集">MMInstruct-cn 数据集 </h4>
-<img src="./Qwen2.5-vl各规模测试结果_files/00001215.jpg" alt="alt text" style="width:250px; height:auto;">  
+<img src="./images/00001215.jpg" alt="alt text" style="width:250px; height:auto;">  
 <p>原始标注：这张照片为一家照明昏暗的小型零食店内部，货架上摆放着多种包装食品，如面包、饮料和零食，顶部有价目表显示各种商品的价格。货架上方贴有指示牌“GATHER &amp; GO，DRINKS $X1”等文案。前方有一个木质收银台，上面放着一个金属篮子和一些食品。店内没有顾客，氛围较为温馨。</p>
 <p>prompt: 请对图片写一个详细的描述，抓住它的主要组成部分，描述值得注意的细节。</p>
 <table>
@@ -172,7 +172,7 @@
 </tr>
 </tbody>
 </table>
-<img src="./Qwen2.5-vl各规模测试结果_files/00008487.jpg" alt="alt text" style="width:250px; height:auto;">  
+<img src="./images/00008487.jpg" alt="alt text" style="width:250px; height:auto;">  
 <p>原始标注：这张照片显示了一条河流上的一艘载满乘客的游船。阳光下，船身呈长条形，颜色主要为白色，并带有一些深棕和红色的装饰。船的顶部是开放式的，可以清楚地看到上面有两层甲板。上层甲板开放无顶，乘客们均坐在那里，他们大多穿着休闲装备，像是在享受愉快的游览。  <br> 甲板的座椅排列整齐，分布在船的前端至后端，很多乘客都朝外侧看去，可能是在欣赏河岸的风光。天气似乎很好，乘客们大都戴着墨镜或帽子来遮挡强烈的阳光。下层甲板覆盖着屋顶，但照片中不易看清里面的情况。  <br> 在游船的最前端，可以看到船长或驾驶员所在的位置，他位于一个有遮盖的驾驶舱中，驾驶舱的色彩与船身的装饰色相呼应。驾驶区域周围设有玻璃或透明的塑料防风挡，以便于船长可以清晰地观察四周的环境。  <br> 在船两侧都挂有救生圈，以确保乘客的安全。河水平静，反射着周围景色和阳光，船体产生了轻微的波纹，显示出它正在平稳地行驶中。  <br> 整体上，这幅图像传达出了一个休闲的午后时光，人们在舒适的气候和温馨的环境下，享受着河上的游览。游船和其上的人们所在的河段开阔，没有明显的其他船只，强调了这是一次安静且私密的体验。</p>
 <p>prompt: 请对图片写一个详细的描述，抓住它的主要组成部分，描述值得注意的细节。</p>
 <table>
@@ -214,7 +214,7 @@
 <hr>
 <h3 id="图文caption">图文Caption </h3>
 <h4 id="datacomp数据集">DataComp数据集 </h4>
-<img src="./Qwen2.5-vl各规模测试结果_files/comp1.jpg" alt="alt text" style="width:200px; height:auto;">  
+<img src="./images/comp1.jpg" alt="alt text" style="width:200px; height:auto;">  
 <p>原始标注：A white container with a blue label featuring the brand name 'Physicians' Choice' and the product name '60 Billion Probiotic with Prebiotic Fiber Blend'. The label also includes the phrase 'Acid Resistant Technology' and a logo with a blue droplet. The container is placed next to a white bottle with a blue cap, which is also labeled with the brand name and product name. The bottle has a blue droplet design on its label.<br>
 翻译：一个带有蓝色标签的白色容器，标签上写有品牌名 <strong>“Physicians' Choice”</strong> 和产品名 <strong>“60 Billion Probiotic with Prebiotic Fiber Blend”</strong>。标签上还包含 <strong>“Acid Resistant Technology”</strong> 字样，以及一个带有蓝色水滴的标志。容器旁边放着一瓶带蓝色瓶盖的白色瓶子，上面同样标注了品牌名和产品名，标签上也有蓝色水滴的设计。</p>
 <table>
@@ -252,7 +252,7 @@
 7B：整体合理，但存在数值错误，可信度一般。<br>
 32B；描述细节丰富，准确度较高。<br>
 72B：描述最接近原始标注，信息完整、准确度高。</p>
-<img src="./Qwen2.5-vl各规模测试结果_files/comp2.jpg" alt="alt text" style="width:200px; height:auto;">  
+<img src="./images/comp2.jpg" alt="alt text" style="width:200px; height:auto;">  
 <p>原始标注：A variety of colorful woven baskets and pottery are displayed on a shelf, with a large antler decoration above them. The shelf is adorned with various items including a cross, a picture of a woman, and a stone statue. There are also several small stones and a wooden cross on the shelf.<br>
 翻译：各种色彩斑斓的编织篮子和陶器陈列在一个架子上，架子上方挂着一件大型鹿角装饰。架子上摆放着各种物品，包括一个十字架、一张女性的照片和一尊石像。架子上还有几块小石头和一个木制十字架。</p>
 <table>
